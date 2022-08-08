@@ -1,0 +1,14 @@
+import { render, screen } from "@testing-library/react";
+import Async from "./Async";
+
+describe("Async component", () => {
+  test("renders posts if request succeeds", async () => {
+    render(<Async />);
+    // If fetch worked we'll have li items
+    // .getByRole will fail if we have more than 1 item
+    // .getAllByRole returns an Array. But instantly, it will not wait
+    // .find - return a promise. Waits for 1s by default (3d argument)
+    const listItemElements = await screen.findAllByRole("listitem"); // Array
+    expect(listItemElements).not.toHaveLength(0);
+  });
+});

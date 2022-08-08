@@ -1,4 +1,4 @@
--   A side project for working with tests in React.
+- A side project for working with tests in React. Jest
 
 # Getting Started with Create React App
 
