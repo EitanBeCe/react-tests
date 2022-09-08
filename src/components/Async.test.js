@@ -3,7 +3,7 @@ import Async from "./Async";
 
 describe("Async component", () => {
   test("renders posts if request succeeds", async () => {
-    // To replace real requests with dummy function
+    // To replace real requests with dummy function (Mock)
     window.fetch = jest.fn();
     // Faking what will be the output of fetch
     window.fetch.mockResolvedValueOnce({
@@ -19,5 +19,3 @@ describe("Async component", () => {
     expect(listItemElements).not.toHaveLength(0);
   });
 });
-
-// Mocks.
